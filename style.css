@@ -1,0 +1,66 @@
+/* Global styles */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--subtle);
+  margin-bottom: 2rem;
+}
+
+/* Navigation */
+nav a {
+  display: inline-block;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent-hover);
+}
+
+/* Light mode */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --subtle: #555555;
+  --accent: #007acc;
+  --accent-hover: #005999;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --text: #f0f0f0;
+    --subtle: #bbbbbb;
+    --accent: #80cbc4;
+    --accent-hover: #4db6ac;
+  }
+}
